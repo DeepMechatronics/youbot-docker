@@ -5,8 +5,8 @@ This repo presents a docker file with youbot configure to teleop "straight out o
 ## Prereq
 [Install docker](https://docs.docker.com/engine/install/)
 
-##How to use?
-### Step 1 Give xhost right to root (needed to stream GUI on host computer)
+## How to use?
+### Step 0 Give xhost right to root (needed to stream GUI on host computer)
 ```
 xhost + local:root
 ```
