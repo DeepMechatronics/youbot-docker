@@ -32,7 +32,7 @@
     <param name="publish_frequency" type="double" value="100.0" />
   </node>
 
-<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_youbot" output="screen">
+<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_youbot" output="screen"/>
 
 
 </launch>
