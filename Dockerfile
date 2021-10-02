@@ -44,7 +44,7 @@ RUN catkin config --extend /opt/ros/kinetic && catkin build --no-status
 
 # Automatically source the workspace when starting a bash session
 RUN echo "source /catkin_ws/devel/setup.bash" >> /etc/bash.bashrc
-
+RUN rosrun xacro xacro --inorder -o /catkin_ws/src/youbot_description/robots/youbot.urdf /catkin_ws/src/youbot_description/robots/youbot.urdf.xacro
 # Install start script
 
 COPY ./start.sh /
