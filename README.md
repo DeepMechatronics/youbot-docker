@@ -21,6 +21,7 @@ sudo docker pull ghcr.io/deepmechatronics/youbot-docker:latest
 ```
 sudo docker run -it --name=youbot  --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/dev:/dev"  --net=host --privileged ghcr.io/deepmechatronics/youbot-docker:latest
 ```
+*note: gazebo take a long time to open empty world*
 
 ### Step 3 Get inside the docker container
 
