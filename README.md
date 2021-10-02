@@ -1,5 +1,5 @@
 # youbot-docker
-What do it do?
+-What do it do?
 This repo presents a docker file with youbot configure to teleop "straight out of the box"
 ![youbot_teleop](https://github.com/DeepMechatronics/youbot-docker/blob/master/youbot_teleop.png)
 ## Prereq
