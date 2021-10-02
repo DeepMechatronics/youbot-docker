@@ -27,6 +27,9 @@ RUN apt-get update && apt-get install -y  ros-kinetic-catkin python-catkin-pkg p
 # Install additional packages
 RUN apt-get update && apt-get -y upgrade && apt-get -y install git libcanberra-gtk-module libcanberra-gtk3-module\
   tmux \
+  ros-kinetic-control-toolbox \
+  ros-kinetic-geographic-msgs \
+  ros-kinetic-controller-interface \
   && rm -rf /var/lib/apt/lists/*
 
 
