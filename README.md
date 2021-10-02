@@ -19,7 +19,7 @@ sudo docker pull ghcr.io/deepmechatronics/youbot-docker:latest
 ### Step 2 Run the docker image as docker container
 
 ```
-sudo docker run -it --name=youbot  --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/dev:/dev"  --net=host --privileged youbot:latest
+sudo docker run -it --name=youbot  --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/dev:/dev"  --net=host --privileged ghcr.io/deepmechatronics/youbot-docker:latest
 ```
 
 ### Step 3 Get inside the docker container
