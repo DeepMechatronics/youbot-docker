@@ -32,7 +32,6 @@ RUN apt-get update && apt-get -y upgrade && apt-get -y install git libcanberra-g
   ros-kinetic-controller-interface \
   ros-kinetic-ros-control ros-kinetic-joint-state-controller ros-kinetic-effort-controllers ros-kinetic-position-controllers ros-kinetic-teleop-twist-keyboard \
   ros-kinetic-velocity-controllers ros-kinetic-ros-controllers ros-kinetic-gazebo-ros ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-control \
-
   && rm -rf /var/lib/apt/lists/*
 
 
