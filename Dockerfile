@@ -20,7 +20,7 @@ RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ss
 
 
 # Install catkin-tools
-RUN apt-get update && apt-get install -y python-catkin-tools \
+RUN apt-get update && apt-get install -y  ros-kinetic-catkin python-catkin-pkg python-catkin-pkg-modules python-catkin-tools \
   && rm -rf /var/lib/apt/lists/*
 
 
@@ -35,10 +35,6 @@ RUN git clone --recurse-submodules -q https://github.com/DeepMechatronics/youbot
 # Copy packages and build the workspace
 WORKDIR /catkin_ws
 
-RUN apt-get update \
-  && rosdep update \
-  && rosdep install --from-paths src -iy \
-  && rm -rf /var/lib/apt/lists/*
 RUN catkin config --extend /opt/ros/kinetic && catkin build --no-status
 
 # Automatically source the workspace when starting a bash session
