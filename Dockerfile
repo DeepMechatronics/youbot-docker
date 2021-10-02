@@ -30,7 +30,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get -y install git libcanberra-g
   && rm -rf /var/lib/apt/lists/*
 
 
-RUN git clone -q https://github.com/DeepMechatronics/ros-docker-template.git catkin_ws
+RUN git clone -q https://github.com/DeepMechatronics/youbot-docker.git catkin_ws
 
 # Copy packages and build the workspace
 WORKDIR /catkin_ws
