@@ -1,5 +1,4 @@
 # youbot-docker
-What do it do?\
 \
 This repo presents a docker file with youbot configure to teleop "straight out of the box"
 \
