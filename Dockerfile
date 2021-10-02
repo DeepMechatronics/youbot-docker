@@ -1,4 +1,4 @@
-FROM ros:melodic
+FROM osrf/ros:kinetic-desktop-full
 
 # These values will be overrided by `docker run --env <key>=<value>` command
 ENV ROS_IP 127.0.0.1
@@ -19,9 +19,6 @@ RUN echo 'root:root' | chpasswd
 RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
 
-# Install melodic
-
-
 # Install catkin-tools
 RUN apt-get update && apt-get install -y python-catkin-tools \
   && rm -rf /var/lib/apt/lists/*
@@ -32,6 +29,9 @@ RUN apt-get update && apt-get -y upgrade && apt-get -y install git libcanberra-g
   tmux \
   && rm -rf /var/lib/apt/lists/*
 
+
+RUN git clone -q https://github.com/DeepMechatronics/ros-docker-template.git catkin_ws
+
 # Copy packages and build the workspace
 WORKDIR /catkin_ws
 
@@ -39,9 +39,7 @@ RUN apt-get update \
   && rosdep update \
   && rosdep install --from-paths src -iy \
   && rm -rf /var/lib/apt/lists/*
-RUN catkin config --extend /opt/ros/melodic && catkin build --no-status
-
-#
+RUN catkin config --extend /opt/ros/kinetic && catkin build --no-status
 
 # Automatically source the workspace when starting a bash session
 RUN echo "source /catkin_ws/devel/setup.bash" >> /etc/bash.bashrc
